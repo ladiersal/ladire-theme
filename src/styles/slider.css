@@ -1,0 +1,127 @@
+/* SLIDER CONTAINER */
+.slider-container {
+    height: 500px;
+    width: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 10px;
+}
+/* INACTIVE SLIDER */
+.inactive {
+    display: none;
+}
+.slide {
+    height: 500px;
+    width: 100%;
+    position: relative;
+}
+.slide-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+    user-select: text;
+    -drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.slide-wrapper {
+    width: 400px;
+    max-height: max-content;
+    position: absolute;
+    z-index: 11;
+    text-align: start;
+    top: 4%;
+    left: 4%
+}
+.slide-wrapper .slide-title {
+    color: #000;
+    font-weight: 800;
+    font-size: 55px;
+    display: inline-block;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    user-select: none;
+}
+.slide-wrapper .slide-desc {
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+    user-select: none;
+}
+/* SLIDE BUTTON */
+.slide-button {
+    border-radius: 5px;
+    box-shadow: 2px 5px 20px 0px rgba(0, 0, 0, 0.30);
+    background-color: #81B214;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide-button:hover {
+    background-color: #fff;
+    color: #81B214;
+}
+.slide-button i {
+    font-size: 20px;
+    padding-left: 5px;
+}
+.prev,
+.next {
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -3rem;
+    font-size: 50px;
+    font-weight: 300;
+    opacity: 0.5;
+}
+.prev:hover,
+.next:hover {
+    opacity: 0.7;
+}
+.next {
+    right: 0;
+}
+.all-dots {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    top: 90%;
+    justify-content: center;
+    z-index: 200;
+}
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0px 3px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+}
+.active-dot,
+.dot:hover {
+    background-color: grey;
+}
+
+@media only screen and (max-width: 992px) {
+    .slide-wrapper .slide-title {
+        font-size: 30px;
+    }
+    .slide-button {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+}

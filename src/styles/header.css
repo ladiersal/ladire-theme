@@ -324,7 +324,6 @@
         top: 87px;
     }
     .header {
-        padding: 0 10px;
     }
 
     .nav__right-icon span {
@@ -333,18 +332,14 @@
 
     .header__bottom .header__bottom__spacial {
         position: absolute;
-        right: 0;
+        right: 15px;
     }
 }
 
 
 /* responsive design (mobile) */
 @media only screen and (max-width: 768px) {
-    .header {
-        width: 100%;
-        height: 45px;
-        line-height: 45px;
-    }
+   
     .cart__icon i,
     .user i,
     .mobile__menu i {
@@ -354,5 +349,10 @@
     }
     .cart__badge {
         top: 3px;
+    }
+}
+@media only screen and (max-width: 470px) {
+    .header__top .header__top-context {
+        display: none;
     }
 }
